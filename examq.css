@@ -1,0 +1,42 @@
+
+.container {
+    max-width: 400px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #36174D;
+    color: #F3EFFE;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #FF4778; 
+  }
+  
+  textarea,
+  input[type="text"],
+  select {
+    width: calc(100% - 22px); 
+    margin-bottom: 10px; 
+    padding: 8px;
+    border: 1px solid #6F36BC;
+    border-radius: 4px;
+    background-color: #F3EFFE;
+    color: #36174D;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FF4778;
+    color: #F3EFFE;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #36174D;
+  }
+  

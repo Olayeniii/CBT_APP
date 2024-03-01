@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #result-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .percentage {
+            font-size: 18px;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .result-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result-container">
+        <h1>Exam Result</h1>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        class ExamResultPage {
+            constructor() {
+                this.resultContainer = document.getElementById('result');
+                this.parseUrlParams();
+                this.displayResult();
+            }
+
+            parseUrlParams() {
+                const urlParams = new URLSearchParams(window.location.search);
+                this.score = parseInt(urlParams.get('score'));
+                this.totalQuestions = parseInt(urlParams.get('totalQuestions'));
+            }
+
+            calculatePercentage() {
+                return ((this.score / this.totalQuestions) * 100).toFixed(2);
+            }
+
+            displayResult() {
+                const percentage = this.calculatePercentage();
+                this.resultContainer.innerHTML = `
+                    <div class="score">You scored ${this.score} / ${this.totalQuestions}</div>
+                    <div class="percentage">Percentage: ${percentage}%</div>
+                `;
+            }
+        }
+
+        const examResultPage = new ExamResultPage();
+    </script>
+</body>
+</html>

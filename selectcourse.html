@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Selection</title>
+  <link rel="stylesheet" href="exam.css">
+  <script src="jquery-2.1.0.min.js"></script>
+  <script type ="module" src="exam.js"></script>
+</head>
+<body>
+  <h1>Select Course</h1>
+  <select id="courseDropdown">
+    <option></option>
+    <option value="Web Technology">Web Technology</option>
+    <option value="Software Upgrade">Software Upgrade</option>
+    <option value="MTH">MTH224</option>
+    <option value="GNS">GNS301</option>
+  </select>
+</body>
+<script type="module">
+  import studentExam from './exam.js';
+  
+  $(document).ready(function () {
+      
+            const studExam = new studentExam();
+
+            $("#courseDropdown").change(function () {
+                const selectedCourse = $(this).val();
+                localStorage.setItem('selectedCourse', selectedCourse);
+                window.location.href = "exam.html";
+            });
+        });
+  </script>
+</html>

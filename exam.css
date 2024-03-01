@@ -1,0 +1,80 @@
+.container {
+    max-width: 500px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #F3EFFE; 
+    color: #36174D;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  h1 {
+    color:#008080; 
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    color: #008080; 
+  }
+  
+  select {
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #008080; 
+    border-radius: 5px;
+    background-color: #e6f7ff; 
+  }
+  
+ 
+  #question {
+    padding: 15px;
+    border: 1px solid #008080;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #d7f3f3; 
+  }
+  
+  
+  button {
+    padding: 10px 20px;
+    margin-top:10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008080;
+    color: #ffffff; 
+    cursor: pointer;
+    float: left;
+  }
+  
+  button:hover {
+    background-color: #006666; 
+  }
+  #submitBtn {
+    margin-left: 16px;
+  }
+
+  .question-btn {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px; 
+    background-color: #008080;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.question-btn:hover {
+    background-color: #006666;
+}
+
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #008080;
+  margin-bottom: 15px;
+}
+  

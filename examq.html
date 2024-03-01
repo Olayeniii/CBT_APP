@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Examiner Module</title>
+  <link rel="stylesheet" href="examq.css">
+  <script src = "jquery-2.1.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Enter Course Questions</h1>
+    <textarea id="questionInput" placeholder="Enter your question here..."></textarea>
+    <input type="text" id="courseInput" placeholder="Course Name">
+    <input type="text" id="option1" placeholder="A">
+    <input type="text" id="option2" placeholder="B">
+    <input type="text" id="option3" placeholder="C">
+    <input type="text" id="option4" placeholder="D">
+    <select id="correctAnswerInput">
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+    <button id="addQuestionBtn" type="button">Add Question</button>
+  </div>
+
+  <script  src="examiner.js"></script>
+ 
+</body>
+</html>
